@@ -3,9 +3,9 @@ import { useAuth } from "../contexts/AuthContext";
 import React, { useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Alert } from 'react-bootstrap';
-import "../style/comman/Login.css";
-import {doc, setDoc } from "firebase/firestore";
-import { auth, db } from "./Firebase";
+import "../style/Signup.css";
+// import {doc, setDoc } from "firebase/firestore";
+// import { auth, db } from "./Firebase";/
 
 export default function Signup() {
 
@@ -39,7 +39,7 @@ export default function Signup() {
             setError("Something Went wrong");
             passwordRef.current.value = "";
             passwordConfirmRef.current.value = "";
-            console.log(e);
+            // console.log(e);
         }
         setLoading(false);
     }
@@ -98,13 +98,12 @@ export default function Signup() {
                                 ref={passwordConfirmRef}
                             />
                         </div>
-                        <br />
                         <div className="button-container">
-                            <input type="submit" value="SUBMIT" id="login_button" disabled={loading} />
+                            <button className="btn login_button" type='submit' disabled={loading}>SUBMIT
+                            </button>
                         </div>
                     </form>
-                    <br />
-                    <p>Already have an account? <Link to='/login'>Login</Link></p>
+                    <p style={{ color: 'black' }}>Already have an account? <Link to='/login'>Login</Link></p>
                 </div>
             </div>
         </React.Fragment>

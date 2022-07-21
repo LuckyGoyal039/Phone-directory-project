@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 // import "../style/SearchComp.css";
-import "../style/comman/Login.css";
+import "../style/inputform.css";
 import { FcIphone, FcManager } from 'react-icons/fc';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { db, auth } from './Firebase';
 import { setDoc, doc, getDoc, } from "firebase/firestore";
 // import { async } from '@firebase/util';
+// import {Alert} from 'react-bootstrap';
 
 function InputForm() {
     const userNameRef = useRef();
@@ -38,22 +39,26 @@ function InputForm() {
             data[count] = [count, userNameRef.current.value, numberRef.current.value];
             const obj = doc(db, 'UserData', auth.currentUser.uid);
             const docref = await setDoc(obj, data, { merge: true });
-            console.log(docref);
+            // console.log(docref);
             navigate("/");
         } catch (e) {
             setError("Somthing Went Wrong");
-            console.log(e);
+            // console.log(e);
         }
+    }
+    function clickCancle() {
+        navigate('/');
     }
 
     return (
         <React.Fragment>
+            {/* {error && <Alert varient="danger">{error}</Alert>} */}
             <div className="background">
                 <div className="my-form1">
                     <p id="login-text">Create New</p>
 
                     <form onSubmit={addUser}>
-                        <div className="input-container">
+                        <div>
                             <label htmlFor="name" className="form__label">
                                 Full Name
                             </label>
@@ -70,7 +75,7 @@ function InputForm() {
                             />
                         </div>
                         <br />
-                        <div className="input-container">
+                        <div>
                             <label htmlFor="name" className="form__label">
                                 Mobile Number
                             </label>
@@ -87,9 +92,9 @@ function InputForm() {
                             />
                         </div>
                         <br />
-                        <div className="button-container">
-                            <button><Link to='/'>Cancel</Link></button>
-                            <input type="submit" value="Add+" id="login_button" />
+                        <div>
+                            <button className='login_button btn' onClick={clickCancle}>Cancle</button>
+                            <input type="submit" value="Add+" className='login_button button1 btn' />
                         </div>
                     </form>
                 </div>

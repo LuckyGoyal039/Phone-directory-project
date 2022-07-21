@@ -1,12 +1,15 @@
-import React, { Component } from 'react';
+import React, { } from 'react';
 import Signup from './components/Signup';
 import { AuthProvider } from './contexts/AuthContext';
 import Login from './components/Login';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-import Home from './components/Home';
+import HomeParent from './components/Home';
 import Account from './components/Account';
 import ForgetPassword from './components/ForgetPassword';
 import AddNumber from './components/AddNumber';
+
+// import { getDoc, doc, } from 'firebase/firestore';
+// import { db, auth } from './components/Firebase';
 
 
 // class App extends Component{
@@ -41,7 +44,7 @@ function App() {
 
     <AuthProvider>
       <Routes>
-      <Route exact path='/' element={<Home/>}/>
+      <Route exact path='/' element={<HomeParent/>}/>
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/account' element={<Account/>}/>

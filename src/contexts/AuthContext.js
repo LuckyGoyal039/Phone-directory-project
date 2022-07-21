@@ -1,7 +1,8 @@
 import React, { useContext, useState, useEffect } from 'react';
+// import HomeParent from '../components/Home';
 import { auth } from "../components/Firebase";
 import { createUserWithEmailAndPassword, getAuth, sendEmailVerification, signInWithEmailAndPassword, signOut, onAuthStateChanged, updateProfile, deleteUser, sendPasswordResetEmail, GoogleAuthProvider, signInWithRedirect,getRedirectResult, FacebookAuthProvider, GithubAuthProvider} from 'firebase/auth';
-import { FirebaseError } from 'firebase/app';
+// import { FirebaseError } from 'firebase/app';
 
 const AuthContext = React.createContext();
 export function useAuth() {
@@ -67,10 +68,10 @@ export function AuthProvider({ children }) {
     //call
     onAuthStateChanged(auth, (user) => {
         if (user) {
-            console.log("Log in");
+            // console.log("Log in");
             setIsUser(true);
         } else {
-            console.log("Log out");
+            // console.log("Log out");
             setIsUser(false);
         }
     });

@@ -1,61 +1,93 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import "../style/SearchComp.css";
-import { db, auth } from './Firebase';
-import { setDoc, doc, getDoc } from "firebase/firestore";
-export default function Frame4() {
-    let showArray;
-    useEffect(() => {
+// import { db, auth } from './Firebase';
+// import {updateDoc, deleteField, doc, deleteDoc} from "firebase/firestore";
+// import { ListGroup } from 'react-bootstrap';  
+import '../style/frame4.css';
+// import {FaTrash} from 'react-icons/fa'
 
-        async function handleSubmit() {
-            try {
-                const docRef = doc(db, "UserData", auth.currentUser.uid);
-                const docSnap = getDoc(docRef);
-                if ((await docSnap).exists()) {
-                    const demo = (await docSnap).data();
-                    for (const key in demo) {
-                        console.log(`${demo[key][0]} ${demo[key][1]} ${demo[key][2]}`);
-                        showArray[key] = demo[key];
-                    }
+function Frame4(props) {
+    // async function deleteitem(docNumber){
+    //     const userRef=doc(db, 'UserData', auth.currentUser.uid);
+    //     // await updateDoc( userRef,
+    //     //     {
+    //     //         docNumber: deleteField()
+    //     //     }
+    //     // )
+    //     await deleteDoc(userRef);
+    // }
+    // let showArray;
+    // useEffect(() => {?
 
-                } else {
-
-                    console.log("data not found");
+    /*async function handleSubmit() {
+        try {
+            const docRef = doc(db, "UserData", auth.currentUser.uid);
+            const docSnap = getDoc(docRef);
+            if ((await docSnap).exists()) {
+                const demo = (await docSnap).data();
+                for (const key in demo) {
+                    console.log(`${demo[key][0]} ${demo[key][1]} ${demo[key][2]}`);
+                    showArray[key] = demo[key];
                 }
 
-            } catch (e) {
-                console.log(e);
+            } else {
+
+                console.log("data not found");
             }
+
+        } catch (e) {
+            console.log(e);
         }
-        handleSubmit();
-    })
-    // async function handleSubmit() {
-    //             try {
-    //                 const docRef = doc(db, "UserData", auth.currentUser.uid);
-    //                 const docSnap = getDoc(docRef);
-    //                 if ((await docSnap).exists()) {
-    //                     const demo = (await docSnap).data();
-    //                     for (const key in demo) {
-    //                         console.log(`${demo[key][0]} ${demo[key][1]} ${demo[key][2]}`);
-    //                         showArray[key]=demo[key];
-    //                     }
+    }
+    handleSubmit();
+})
+// async function handleSubmit() {
+//             try {
+//                 const docRef = doc(db, "UserData", auth.currentUser.uid);
+//                 const docSnap = getDoc(docRef);
+//                 if ((await docSnap).exists()) {
+//                     const demo = (await docSnap).data();
+//                     for (const key in demo) {
+//                         console.log(`${demo[key][0]} ${demo[key][1]} ${demo[key][2]}`);
+//                         showArray[key]=demo[key];
+//                     }
 
-    //                 } else {
+//                 } else {
 
-    //                     console.log("data not found");
-    //                 }
+//                     console.log("data not found");
+//                 }
 
-    //             } catch (e) {
-    //                 console.log(e);
-    //             }
-    //         }
-    //         handleSubmit();
-    const arr = ["lucky", "keshav", "ashish"];
+//             } catch (e) {
+//                 console.log(e);
+//             }
+//         }
+//         handleSubmit();*/
+
     return (
-        <React.Fragment>
-            {
-                // arr.map(x => <h1>{x}</h1>)
-                // showArray.map(ele => <p>{ele}</p>)
-            }
-        </React.Fragment>
+        <div className='background4'>
+            <table className=' table1 table table-striped table-hover '>
+                <thead>
+
+                    <tr>
+                        <th scope='col'>S.NO</th>
+                        <th scope='col'>Full Name</th>
+                        <th scope='col'>Mobile Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        props.list.map((val) => (
+                            <tr >
+                                <th scope='row'>{val[0]}</th>
+                                <td>{val[1]}</td>
+                                <td>{val[2]}</td>
+                                {/* <td><FaTrash style={{color:"red"}} /></td> */}
+                            </tr>
+                        )
+                        )}
+                </tbody>
+            </table>
+        </div>
     )
 }
+export default Frame4;

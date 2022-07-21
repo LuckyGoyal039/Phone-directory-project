@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
 
 
-#navbar-brand{
+#navbar_logo{
     display: contents;
     margin-left: 15%;
   }
   
   #logo{
-    width: 15%;
+    width: 10%;
     margin-left: 5%;
-    margin-right: 35%;
+    margin-right: 50%;
   }
 
   .my-navbar-buttons{
@@ -23,7 +23,10 @@
   #active{
     font-weight: 900;
   } 
-
+  .link_style{
+    text-decoration: none;
+    color:#3A69CD;
+  }
   @media only screen and (max-width: 1000px) {
     #logo{
       width: 150px;
