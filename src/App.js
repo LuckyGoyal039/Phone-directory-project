@@ -24,7 +24,7 @@ import AddNumber from './components/AddNumber';
 //       <BrowserRouter>
 
 //         <AuthProvider>
-//           <Routes basename={}>
+//           <Routes basename=" https://luckygoyal039.github.io/">
 //             <Route exact path='/' element={<Home />} />
 //             <Route path='/signup' element={<Signup />} />
 //             <Route path='/login' element={<Login />} />
