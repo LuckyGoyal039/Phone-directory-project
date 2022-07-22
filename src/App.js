@@ -24,7 +24,7 @@ import AddNumber from './components/AddNumber';
 //       <BrowserRouter>
 
 //         <AuthProvider>
-//           <Routes>
+//           <Routes basename={}>
 //             <Route exact path='/' element={<Home />} />
 //             <Route path='/signup' element={<Signup />} />
 //             <Route path='/login' element={<Login />} />
