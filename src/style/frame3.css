@@ -1,47 +1,45 @@
-.background1{
-    background-color: #c8d9ee;
-    font-family: 'Poppins', sans-serif;
-    width: 100%;
-    height:40vw;
-    color:#3A69CD;
+.background1 {
+  background-color: #c8d9ee;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 40vw;
+  color: #3a69cd;
 }
 
-.outer_layer{
-    
-     display: block;
-     /* margin-top: 15px; */
+.outer_layer {
+  display: block;
 }
 
-.image1{
-    width:23vw;
-    height:24vw;
-    border-radius: 2vw;
-    margin-left: 14vw;
-    margin-top:3vw;
+.image1 {
+  width: 23vw;
+  height: 24vw;
+  border-radius: 2vw;
+  margin-left: 14vw;
+  margin-top: 3vw;
 }
 
-.image2{
-    width:23vw;
-    height:24vw;
-    border-radius: 2vw;
-    margin-left: 8vw;
-    margin-top:3vw;
+.image2 {
+  width: 23vw;
+  height: 24vw;
+  border-radius: 2vw;
+  margin-left: 8vw;
+  margin-top: 3vw;
 }
-.arrow{
-    font-size: 8vw;
-    margin-left: 8vw;
+.arrow {
+  font-size: 8vw;
+  margin-left: 8vw;
 }
-#addButton{
-    margin-top:4vw;
-    text-align: center;
+#addButton {
+  margin-top: 4vw;
+  text-align: center;
 }
-#addButton  button{
-    background-color: #3a69cd;
-    width: 13%;
-    font-weight: 900;
-    font-size: 1.25vw;
-    height: 2.7vw;
-    border: none;
-    border-radius: 0.6vw;
-    color: white;
+#addButton button {
+  background-color: #3a69cd;
+  width: 13%;
+  font-weight: 900;
+  font-size: 1.25vw;
+  height: 2.7vw;
+  border: none;
+  border-radius: 0.6vw;
+  color: white;
 }

@@ -1,35 +1,20 @@
-.background4{
-    /* position: absolute; */
-    width: 100%;
-    height: auto;
-    background-color: #c8d9ee;
-    /* color:#3A69CD; */
-    font-family: 'Poppins', sans-serif;
-    border:1px solid #c8d9ee;
-    /* text-align:center; */
-    /* display: block; */
-}
-.table1{
-    /* position:absolute; */
-    margin-left:auto;
-    margin-right:auto;
-    margin-top:5%;
-    text-align:center;
-    top:10%;
-    /* left:25%; */
-    width:50%;
-    font-size:1.2vw;
-    background-color: white;
-    border-radius:25px;
-}
-/* 
-td.deleteicon{
-    color:white;
-}
- td.deleteicon:hover{
-    display:inline;
-} 
+.background4 {
+  width: 100%;
+  height: auto;
+  background-color: #c8d9ee;
 
-tr.demo:hover td.deleteicon{
-    color:black;
-} */
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #c8d9ee;
+}
+.table1 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  text-align: center;
+  top: 10%;
+
+  width: 50%;
+  font-size: 1.2vw;
+  background-color: white;
+  border-radius: 25px;
+}
